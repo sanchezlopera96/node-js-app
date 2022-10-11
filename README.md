@@ -1,3 +1,16 @@
+Video explicativo de la funcionalidad
+
+https://youtu.be/TlIM_CLiGrE
+
+Urls despliegue
+
+https://back-web-iud.herokuapp.com/
+
+https://fantastic-manatee-55e4ca.netlify.app/
+
+
+
+
 # node-js-app
 
 
