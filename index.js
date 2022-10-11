@@ -22,8 +22,12 @@ app.use('/estado-equipo', estadoequipo); // http://localhost:3000/estado-equipo 
 app.use('/marca', marca); // http://localhost:3000/marca GET, POST, PUT
 app.use('/tipo-equipo', tipoequipo); // http://localhost:3000/tipo-equipo GET, POST, PUT
 
-app.listen(3001, function() {
-    console.log('Aplicacion corriendo en el puerto 3001');
+app.set('port', process.env.PORT || 3001)
+app.set('json spaces', 2)
+
+app.listen(app.get('port'), () => {
+    console.log(`Servidor arrancó por puerto ${app.get('port')}`);
 });
+
 
 
