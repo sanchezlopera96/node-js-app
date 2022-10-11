@@ -1,7 +1,9 @@
 const express = require('express');
 const { getConnection } = require('./db/db-connection-mongo');
+const cors = require('cors');
 
 const app = express();
+app.use(cors());
 
 getConnection();
 
@@ -20,8 +22,8 @@ app.use('/estado-equipo', estadoequipo); // http://localhost:3000/estado-equipo 
 app.use('/marca', marca); // http://localhost:3000/marca GET, POST, PUT
 app.use('/tipo-equipo', tipoequipo); // http://localhost:3000/tipo-equipo GET, POST, PUT
 
-app.listen(3000, function() {
-    console.log('Aplicacion corriendo en el puerto 3000');
+app.listen(3001, function() {
+    console.log('Aplicacion corriendo en el puerto 3001');
 });
 
 
